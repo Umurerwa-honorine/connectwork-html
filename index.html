@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ConnectWork — Find Work. Hire Talent.</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-brand">🤝 ConnectWork</a>
+      <ul class="nav-menu">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="jobs.html">Jobs</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="register.html">Register</a></li>
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <button class="theme-toggle" id="themeToggle" title="Toggle theme" aria-label="Toggle color theme">🌙</button>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Find Work. Hire Talent.</h1>
+      <p class="tagline">One platform, two sides of the same goal.</p>
+      <p>
+        ConnectWork connects freelancers with clients who need work done —
+        post a job in minutes, or browse open work and apply with a click.
+        No middlemen, no complicated process.
+      </p>
+      <div class="btn-row">
+        <a href="register.html" class="btn">Get Started Free</a>
+        <a href="login.html" class="btn btn-outline">I already have an account</a>
+      </div>
+    </div>
+
+    <div class="hero-illustration-wrap">
+      <svg class="hero-illustration" viewBox="0 0 600 460" xmlns="http://www.w3.org/2000/svg">
+        <ellipse cx="300" cy="250" rx="270" ry="200" fill="var(--card-bg)" />
+
+        <!-- desk/table -->
+        <rect x="90" y="330" width="420" height="16" rx="4" fill="#163b37" />
+
+        <!-- laptop center -->
+        <rect x="245" y="265" width="110" height="72" rx="5" fill="#0f2b28" />
+        <rect x="252" y="272" width="96" height="56" rx="2" fill="var(--primary)" opacity="0.3" />
+        <rect x="232" y="337" width="136" height="9" rx="3" fill="#0a1e1b" />
+
+        <!-- left person (freelancer) -->
+        <circle cx="175" cy="235" r="26" fill="#e8b48a" />
+        <path d="M151 229 q0 -28 24 -28 q24 0 24 28 q-8 -12 -24 -12 q-16 0 -24 12 z" fill="#2c1b0f" />
+        <path d="M130 330 q8 -55 45 -55 q37 0 45 55 z" fill="var(--primary)" />
+        <path d="M205 300 q20 -5 28 -22" stroke="#e8b48a" stroke-width="12" fill="none" stroke-linecap="round" />
+
+        <!-- right person (client) -->
+        <circle cx="425" cy="235" r="26" fill="#c98a5e" />
+        <path d="M401 227 q0 -26 24 -26 q24 0 24 26 q-8 -10 -24 -10 q-16 0 -24 10 z" fill="#1c130c" />
+        <path d="M380 330 q8 -55 45 -55 q37 0 45 55 z" fill="var(--accent)" />
+        <path d="M395 300 q-20 -5 -28 -22" stroke="#c98a5e" stroke-width="12" fill="none" stroke-linecap="round" />
+
+        <!-- handshake spark -->
+        <circle cx="300" cy="283" r="7" fill="var(--accent)" />
+
+        <!-- floating icons -->
+        <g opacity="0.9">
+          <circle cx="110" cy="130" r="22" fill="#0f2b28" stroke="var(--primary)" stroke-width="3" />
+          <path d="M100 130 l7 7 l14 -14" stroke="var(--primary)" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+        </g>
+        <g opacity="0.9">
+          <circle cx="490" cy="150" r="20" fill="#0f2b28" stroke="var(--accent)" stroke-width="3" />
+          <text x="490" y="157" font-size="18" text-anchor="middle" fill="var(--accent)" font-family="sans-serif" font-weight="700">$</text>
+        </g>
+        <circle cx="70" cy="380" r="8" fill="var(--text-muted)" opacity="0.4" />
+        <circle cx="95" cy="392" r="5" fill="var(--text-muted)" opacity="0.3" />
+      </svg>
+    </div>
+  </section>
+
+  <section class="page-content page-wide home-jobs">
+    <div class="page-intro">
+      <p class="eyebrow">Work that fits your skills</p>
+      <h2>Explore opportunities</h2>
+      <p>Search roles and categories, then open a listing to see requirements and apply.</p>
+      <a href="jobs.html" class="text-link">Browse all jobs →</a>
+    </div>
+    <div class="job-filters">
+      <div class="form-group">
+        <label for="jobSearch">Search jobs</label>
+        <input id="jobSearch" type="search" placeholder="Role, company, location, or skill" />
+      </div>
+      <div class="form-group">
+        <label for="categoryFilter">Category</label>
+        <select id="categoryFilter"></select>
+      </div>
+    </div>
+    <ul class="job-list" id="jobsList" aria-live="polite"></ul>
+  </section>
+
+  <div class="role-grid">
+    <div class="role-card">
+      <div class="role-icon"></div>
+      <h3>For Freelancers</h3>
+      <p>Browse open jobs, apply in seconds, and track every application in one place.</p>
+    </div>
+    <div class="role-card">
+      <div class="role-icon"></div>
+      <h3>For Clients</h3>
+      <p>Post a job, review applicants, and hire the right person — no back and forth.</p>
+    </div>
+  </div>
+
+  <div class="feature-grid">
+    <div class="feature-card">
+      <div class="emoji"></div>
+      <h4>Fast Posting</h4>
+      <p>Jobs go live instantly, no approval wait.</p>
+    </div>
+    <div class="feature-card">
+      <div class="emoji"></div>
+      <h4>Simple Applications</h4>
+      <p>One click to apply, no lengthy forms.</p>
+    </div>
+    <div class="feature-card">
+      <div class="emoji"></div>
+      <h4>Clear Status</h4>
+      <p>Know exactly where every application stands.</p>
+    </div>
+  </div>
+
+  <footer>
+    ConnectWork — built to connect skills with opportunity. <a href="register.html">Get started</a>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

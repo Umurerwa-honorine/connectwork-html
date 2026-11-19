@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ConnectWork — Login</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-brand">🤝 ConnectWork</a>
+      <ul class="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="jobs.html">Jobs</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="login.html" class="active">Login</a></li>
+        <li><a href="register.html">Register</a></li>
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <button class="theme-toggle" id="themeToggle" title="Toggle theme" aria-label="Toggle color theme">🌙</button>
+    </div>
+  </nav>
+
+  <main class="page-content center">
+    <h1>Welcome Back</h1>
+    <p>Log in to continue to your dashboard.</p>
+
+    <p class="info-text">Demo admin login: admin@connectwork.com / admin123</p>
+    <form class="auth-form" id="loginForm" novalidate>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input id="email" type="email" placeholder="you@example.com" />
+        <p class="error-text" id="emailError"></p>
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input id="password" type="password" placeholder="••••••••" />
+        <p class="error-text" id="passwordError"></p>
+      </div>
+
+      <button type="submit" class="btn">Login</button>
+      <button type="button" class="btn btn-outline" id="adminLoginButton">Login as Admin</button>
+      <p class="success-text" id="successMsg"></p>
+    </form>
+  </main>
+
+  <footer>
+    ConnectWork — built to connect skills with opportunity. <a href="register.html">Create an account</a>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

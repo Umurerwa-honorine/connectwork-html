@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ConnectWork — About</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-brand">🤝 ConnectWork</a>
+      <ul class="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="jobs.html">Jobs</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="register.html">Register</a></li>
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="about.html" class="active">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <button class="theme-toggle" id="themeToggle" title="Toggle theme" aria-label="Toggle color theme">🌙</button>
+    </div>
+  </nav>
+
+  <main class="page-content">
+    <h1>About ConnectWork</h1>
+    <p>
+      ConnectWork is a two-sided platform connecting freelancers with clients
+      who need work done. Clients post jobs describing what they need and a
+      budget; freelancers can search by keyword and category, review job
+      requirements, and apply with a message.
+    </p>
+    <p>
+      Once a freelancer applies, the client can review their application and
+      either accept or decline it. Both sides can track status in real time
+      from their own dashboard — pending, accepted, or declined.
+    </p>
+    <p>
+      This version runs entirely in your browser using local storage, so it's
+      a fast way to demonstrate the full flow — registering as either role,
+      posting jobs, applying, and managing applications — without needing a
+      real backend or database.
+    </p>
+    <p>
+      Profile details, account information, job listings, applications, and
+      contact messages stay in this browser. This frontend demo does not
+      provide server-side authentication, send email, or synchronize data
+      between devices.
+    </p>
+  </main>
+
+  <footer>
+    ConnectWork — built to connect skills with opportunity. <a href="register.html">Get started</a>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

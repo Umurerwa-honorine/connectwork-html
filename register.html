@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ConnectWork — Register</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-brand">🤝 ConnectWork</a>
+      <ul class="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="jobs.html">Jobs</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="register.html" class="active">Register</a></li>
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <button class="theme-toggle" id="themeToggle" title="Toggle theme" aria-label="Toggle color theme">🌙</button>
+    </div>
+  </nav>
+
+  <main class="page-content center">
+    <h1>Join ConnectWork</h1>
+    <p>Choose how you'll use ConnectWork, then create your account.</p>
+
+    <div class="role-grid" style="margin-top: 1.5rem;">
+      <div class="role-card selected" id="roleFreelancer">
+        <div class="role-icon">💼</div>
+        <h3>I'm a Freelancer</h3>
+        <p>I want to find work and apply to jobs.</p>
+      </div>
+      <div class="role-card" id="roleClient">
+        <div class="role-icon">🏢</div>
+        <h3>I'm a Client</h3>
+        <p>I want to post jobs and hire freelancers.</p>
+      </div>
+    </div>
+
+    <form class="auth-form" id="registerForm" novalidate>
+      <div class="form-group">
+        <label for="name">Full name</label>
+        <input id="name" type="text" />
+        <p class="error-text" id="nameError"></p>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input id="email" type="email" placeholder="you@example.com" />
+        <p class="error-text" id="emailError"></p>
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input id="password" type="password" placeholder="••••••••" />
+        <p class="error-text" id="passwordError"></p>
+      </div>
+
+      <div class="form-group">
+        <label for="confirmPassword">Confirm Password</label>
+        <input id="confirmPassword" type="password" placeholder="••••••••" />
+        <p class="error-text" id="confirmPasswordError"></p>
+      </div>
+
+      <button type="submit" class="btn">Create Account</button>
+      <p class="success-text" id="successMsg"></p>
+    </form>
+  </main>
+
+  <footer>
+    ConnectWork — built to connect skills with opportunity. <a href="login.html">Already have an account?</a>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

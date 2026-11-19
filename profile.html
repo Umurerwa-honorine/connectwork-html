@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ConnectWork — Your Profile</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-brand">🤝 ConnectWork</a>
+      <ul class="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="jobs.html">Jobs</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="register.html">Register</a></li>
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <button class="theme-toggle" id="themeToggle" title="Toggle theme" aria-label="Toggle color theme">🌙</button>
+    </div>
+  </nav>
+
+  <main class="page-content">
+    <a class="back-link" href="dashboard.html">← Back to dashboard</a>
+    <p class="eyebrow">Make a great first impression</p>
+    <h1>Your profile</h1>
+    <p>Share your photo, skills, education, and experience with clients.</p>
+    <form class="auth-form form-wide" id="profileForm">
+      <div class="profile-photo-field">
+        <img id="profilePhoto" class="profile-photo-preview" alt="Profile photo preview" hidden />
+        <div class="form-group">
+          <label for="profilePhotoInput">Profile photo</label>
+          <input id="profilePhotoInput" type="file" accept="image/*" />
+          <p class="form-note">Choose an image up to 1 MB. It stays in this browser.</p>
+          <p class="error-text" id="profilePhotoError" role="alert"></p>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="profileName">Full name</label>
+        <input id="profileName" type="text" required maxlength="100" />
+        <p class="error-text" id="profileNameError"></p>
+      </div>
+      <div class="form-group">
+        <label for="profileLocation">Location</label>
+        <input id="profileLocation" type="text" maxlength="100" placeholder="City, country or Remote" />
+      </div>
+      <div class="form-group">
+        <label for="profileSkills">Skills</label>
+        <textarea id="profileSkills" rows="3" maxlength="1000" placeholder="Add skills separated by commas"></textarea>
+      </div>
+      <div class="form-group">
+        <label for="profileEducation">Education</label>
+        <textarea id="profileEducation" rows="3" maxlength="1000" placeholder="Schools, qualifications, or courses"></textarea>
+      </div>
+      <div class="form-group">
+        <label for="profileExperience">Experience</label>
+        <textarea id="profileExperience" rows="5" maxlength="2000" placeholder="Relevant work and projects"></textarea>
+      </div>
+      <button class="btn" type="submit">Save profile</button>
+      <p class="success-text" id="profileSuccess" role="status"></p>
+    </form>
+  </main>
+
+  <footer>ConnectWork — built to connect skills with opportunity. <a href="dashboard.html">Back to dashboard</a></footer>
+  <script src="app.js"></script>
+</body>
+</html>

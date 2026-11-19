@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Search ConnectWork job listings by keyword and category." />
+  <title>ConnectWork — Browse Jobs</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-brand">🤝 ConnectWork</a>
+      <ul class="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="jobs.html" class="active">Jobs</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="register.html">Register</a></li>
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <button class="theme-toggle" id="themeToggle" title="Toggle theme" aria-label="Toggle color theme">🌙</button>
+    </div>
+  </nav>
+
+  <main class="page-content page-wide">
+    <div class="page-intro">
+      <p class="eyebrow">Find your next opportunity</p>
+      <h1>Browse open jobs</h1>
+      <p>Search by role, company, location, or skill. Choose a listing to see the full details and apply.</p>
+    </div>
+    <div class="job-type-toggle" role="group" aria-label="Filter job type">
+      <button type="button" class="btn" id="allJobsButton" aria-pressed="true">All jobs</button>
+      <button type="button" class="btn btn-outline" id="studentJobsButton" aria-pressed="false">Student part-time</button>
+      <p>Hourly-paid roles with flexible shifts designed to fit around classes.</p>
+    </div>
+    <div class="job-filters" role="search">
+      <div class="form-group">
+        <label for="jobSearch">Search jobs</label>
+        <input id="jobSearch" type="search" placeholder="Try “designer”, “remote”, or “finance”" />
+      </div>
+      <div class="form-group">
+        <label for="categoryFilter">Category</label>
+        <select id="categoryFilter"></select>
+      </div>
+    </div>
+    <ul class="job-list" id="jobsList" aria-live="polite"></ul>
+  </main>
+
+  <footer>ConnectWork — built to connect skills with opportunity. <a href="register.html">Create an account</a></footer>
+  <script src="app.js"></script>
+</body>
+</html>

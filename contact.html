@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ConnectWork — Contact</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-brand">🤝 ConnectWork</a>
+      <ul class="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="jobs.html">Jobs</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="register.html">Register</a></li>
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+      <button class="theme-toggle" id="themeToggle" title="Toggle theme" aria-label="Toggle color theme">🌙</button>
+    </div>
+  </nav>
+
+  <main class="page-content center">
+    <p class="eyebrow">We're here to help</p>
+    <h1>Contact ConnectWork</h1>
+    <p>Send the team a message using the form below.</p>
+    <form class="auth-form form-wide" id="contactForm" novalidate>
+      <div class="form-group">
+        <label for="contactName">Your name</label>
+        <input id="contactName" type="text" required maxlength="100" autocomplete="name" />
+        <p class="error-text" id="contactNameError"></p>
+      </div>
+      <div class="form-group">
+        <label for="contactEmail">Email</label>
+        <input id="contactEmail" type="email" required maxlength="254" autocomplete="email" />
+        <p class="error-text" id="contactEmailError"></p>
+      </div>
+      <div class="form-group">
+        <label for="contactSubject">Subject</label>
+        <input id="contactSubject" type="text" maxlength="120" />
+      </div>
+      <div class="form-group">
+        <label for="contactMessage">Message</label>
+        <textarea id="contactMessage" rows="6" required maxlength="2000"></textarea>
+        <p class="error-text" id="contactMessageError"></p>
+      </div>
+      <button class="btn" type="submit">Send message</button>
+      <p class="success-text" id="contactSuccess" role="status"></p>
+      <p class="form-note">Frontend demo: messages are saved only in this browser and are not emailed to the team.</p>
+    </form>
+  </main>
+
+  <footer>ConnectWork — built to connect skills with opportunity. <a href="index.html">Back home</a></footer>
+  <script src="app.js"></script>
+</body>
+</html>
